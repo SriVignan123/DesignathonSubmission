@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Kaleidos – Custom Kaleidoscopes</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="base">
+    <!-- Main background video (changes with color selection) -->
+    <video id="bg-video" autoplay muted loop playsinline preload="auto">
+        <!-- DEFAULT VIDEO: kaleidoscope.mp4 in SAME folder as index.html -->
+        <source src="kaleidoscope.mp4" type="video/mp4">
+    </video>
+
+    <!-- Fade layer for smooth transitions -->
+    <div class="video-fade"></div>
+
+    <!-- Color-tinted overlay -->
+    <div class="bg-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo">Kaleidos</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#colors">Colors</a>
+            <a href="#checkout">Checkout</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO / HOME -->
+        <section class="section hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">Handcrafted Kaleidoscopes</p>
+                <h1>Where light becomes art.</h1>
+                <p class="hero-sub">
+                    Each Kaleidos piece is a handcrafted optical sculpture designed to create living, shifting patterns.
+                    Scroll to explore color stories and watch the background evolve in real time.
+                    Your choices shape the kaleidoscope you bring to life.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#colors" class="btn primary">Choose Colors</a>
+                </div>
+                <p class="scroll-hint">Scroll to design your kaleidoscope ↓</p>
+            </div>
+        </section>
+
+        <!-- COLOR SELECTION (this controls BACKGROUND VIDEO) -->
+        <section class="section selector" id="colors">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <h2>Choose Your Color Story</h2>
+                    <p>
+                        Every palette captures a different mood. Soft auroras, neon edges, warm sunsets,
+                        or deep ocean tones. Selecting a color instantly transforms the full screen kaleidoscope
+                        behind the page, so you can feel the design before it becomes real.
+                    </p>
+                </div>
+
+                <!-- Hidden radios that store selected palette -->
+                <input type="radio" name="palette" id="pal-aurora">
+                <input type="radio" name="palette" id="pal-neon">
+                <input type="radio" name="palette" id="pal-sunset">
+                <input type="radio" name="palette" id="pal-ocean">
+
+                <div class="swatch-row">
+                    <label class="swatch" for="pal-aurora">
+                        <span class="swatch-dot" data-colors="aurora"></span>
+                        <span class="swatch-text">
+                            <strong>Aurora Dream</strong>
+                            <small>Pink, purple, and cyan tones</small>
+                        </span>
+                    </label>
+
+                    <label class="swatch" for="pal-neon">
+                        <span class="swatch-dot" data-colors="neon"></span>
+                        <span class="swatch-text">
+                            <strong>Neon Arcade</strong>
+                            <small>Electric blue and bright lime</small>
+                        </span>
+                    </label>
+
+                    <label class="swatch" for="pal-sunset">
+                        <span class="swatch-dot" data-colors="sunset"></span>
+                        <span class="swatch-text">
+                            <strong>Solar Sunset</strong>
+                            <small>Orange, magenta, and soft gold</small>
+                        </span>
+                    </label>
+
+                    <label class="swatch" for="pal-ocean">
+                        <span class="swatch-dot" data-colors="ocean"></span>
+                        <span class="swatch-text">
+                            <strong>Deep Ocean</strong>
+                            <small>Teal, indigo, and midnight blue</small>
+                        </span>
+                    </label>
+                </div>
+
+                <p class="tiny-note">
+                    Watch the background respond with new patterns and colors.
+                    Each palette has its own handcrafted kaleidoscope sequence.
+                </p>
+            </div>
+        </section>
+
+        <!-- CHECKOUT SECTION (STATIC DEMO) -->
+        <section class="section checkout" id="checkout">
+            <div class="section-inner">
+                <div class="checkout-card">
+                    <h2>Almost yours.</h2>
+                    <p class="checkout-sub">
+                        A simple concept checkout that completes the customization journey.
+                        This section is here only for presentation and storytelling.
+                    </p>
+                    <div class="checkout-summary">
+                        <div>
+                            <h3>Color Story</h3>
+                            <p><span class="pill">Original Kaleidoscope</span></p>
+                        </div>
+                        <div>
+                            <h3>Price</h3>
+                            <p>AED 249</p>
+                        </div>
+                    </div>
+                    <button class="btn primary wide">Confirm Order (Demo)</button>
+                    <p class="note">No payment is collected. This page is part of a design showcase.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Kaleidos • Handcrafted optical art imagined for a design showcase</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
